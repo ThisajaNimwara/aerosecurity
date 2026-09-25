@@ -1,0 +1,38 @@
+{
+  "url": "http://127.0.0.1:8081/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "aerosecurity.space — Operational Intelligence for Aerospace",
+      "hasCanvas": false,
+      "bodyTextLen": 5625,
+      "bodyTextHash": "15325062b9ece9e809ea8140d448d9e42c11fc188d47cac993b26299be861586",
+      "bodyTextPrefix": "Skip to content < aerosecurity.space /> [ PLATFORM ] [ SOLUTIONS",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "aerosecurity.space — Operational Intelligence for Aerospace",
+      "hasCanvas": false,
+      "bodyTextLen": 5184,
+      "bodyTextHash": "6594213a3bf080c4d6f6c0bbf660ba2648b58d75f95b74a202592d205f3b6e9f",
+      "bodyTextPrefix": "Skip to content < aero /> AEROSPACE · DEFENSE · CYBER OPERATIONA",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-built.json",
+  "divergesFromBaseline": false,
+  "baselineReasons": []
+}

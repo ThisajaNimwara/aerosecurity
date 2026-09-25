@@ -1,0 +1,260 @@
+import { i as __toESM } from "../_runtime.mjs";
+import { n as require_react } from "../_libs/@radix-ui/react-compose-refs+[...].mjs";
+import { v as useNavigate } from "../_libs/@tanstack/react-router+[...].mjs";
+import { n as require_jsx_runtime } from "../_libs/radix-ui__react-context+react.mjs";
+import { d as SOLUTION_DETAILS, r as COMPLIANCE } from "./router-BIQwfv61.mjs";
+import { l as useGoContact, n as PageShell, r as Reveal, t as Button } from "./reveal-BenA13yG.mjs";
+import { t as PageHeader } from "./page-header-Ed3B_R4K.mjs";
+import { n as palette, t as CornerFrame } from "./corner-frame-CBIp9iMg.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/solutions-ZAjAL33U.js
+var import_react = /* @__PURE__ */ __toESM(require_react());
+var import_jsx_runtime = require_jsx_runtime();
+function HangarFallback() {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("svg", {
+		viewBox: "0 0 720 400",
+		className: "h-full w-full opacity-70",
+		"aria-hidden": true,
+		preserveAspectRatio: "xMidYMid meet",
+		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("g", {
+			fill: "none",
+			stroke: palette.signal,
+			strokeWidth: "1",
+			children: [
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("rect", {
+					x: "70",
+					y: "40",
+					width: "580",
+					height: "300",
+					opacity: "0.35"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("line", {
+					x1: "70",
+					y1: "340",
+					x2: "650",
+					y2: "340"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("polygon", {
+					points: "250,210 360,170 470,210 430,230 290,230",
+					stroke: palette.primary
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("rect", {
+					x: "330",
+					y: "188",
+					width: "60",
+					height: "18"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", {
+					cx: "180",
+					cy: "230",
+					r: "28"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("line", {
+					x1: "152",
+					y1: "230",
+					x2: "208",
+					y2: "230"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("line", {
+					x1: "180",
+					y1: "202",
+					x2: "180",
+					y2: "258"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("rect", {
+					x: "520",
+					y: "90",
+					width: "44",
+					height: "28"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("rect", {
+					x: "500",
+					y: "98",
+					width: "22",
+					height: "12"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("rect", {
+					x: "564",
+					y: "98",
+					width: "22",
+					height: "12"
+				})
+			]
+		})
+	});
+}
+function SolutionsCanvas() {
+	const [Scene, setScene] = (0, import_react.useState)(null);
+	(0, import_react.useEffect)(() => {
+		let alive = true;
+		const timer = window.setTimeout(() => {
+			import("./solutions-scene-DD87crXN.mjs").then((mod) => {
+				if (alive) setScene(() => mod.SolutionsScene);
+			}).catch(() => {});
+		}, 120);
+		return () => {
+			alive = false;
+			window.clearTimeout(timer);
+		};
+	}, []);
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+		className: "relative overflow-hidden border border-border bg-bg",
+		children: [
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CornerFrame, {}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+				className: "relative aspect-[16/10] min-h-[280px] w-full touch-none md:min-h-[420px]",
+				children: Scene ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Scene, {}) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(HangarFallback, {})
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "pointer-events-none absolute inset-x-0 top-0 flex items-start justify-between px-4 py-3 sm:px-5",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+					className: "font-mono text-micro uppercase tracking-[0.16em] text-signal",
+					children: "Asset bay // dual-use"
+				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+					className: "font-mono text-micro uppercase tracking-[0.16em] text-dim",
+					children: "Drag to orbit"
+				})]
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "flex flex-wrap items-center justify-between gap-3 border-t border-border px-4 py-3 sm:px-5",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+					className: "font-mono text-micro uppercase tracking-[0.14em] text-dim",
+					children: "UAV · UAS · LEO bus"
+				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					className: "flex flex-wrap gap-2",
+					children: COMPLIANCE.map((badge) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+						className: "border border-border px-2 py-1 font-mono text-micro uppercase tracking-[0.12em] text-dim",
+						children: badge
+					}, badge))
+				})]
+			})
+		]
+	});
+}
+function SolutionsPage() {
+	const goContact = useGoContact();
+	const navigate = useNavigate();
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(PageShell, { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(PageHeader, {
+		index: "02",
+		label: "Solutions",
+		title: "Seven capabilities. One control plane.",
+		intro: "Dual-use cybersecurity for commercial LEO constellations and defense unmanned systems. Every product ships from the same EDR core — hardened for the specific bus, radio, or airframe it rides on."
+	}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+		className: "mx-auto max-w-5xl px-4 pb-24 sm:px-6 sm:pb-32",
+		children: [
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Reveal, { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(SolutionsCanvas, {}) }),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("ol", {
+				className: "mt-16 flex flex-col",
+				children: SOLUTION_DETAILS.map((cap) => {
+					const Icon = cap.icon;
+					return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", {
+						id: cap.id,
+						className: "scroll-mt-28 border-t border-border py-14 sm:py-16",
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Reveal, { children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "flex flex-col gap-8",
+							children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "flex flex-wrap items-center justify-between gap-4",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "flex items-center gap-4",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+											className: "flex size-12 items-center justify-center border border-border bg-surface text-primary",
+											children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Icon, {
+												className: "size-5",
+												strokeWidth: 1.6
+											})
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+											className: "font-mono text-micro tabular-nums tracking-[0.16em] text-dim",
+											children: [cap.index, " / 07"]
+										})]
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										className: "font-mono text-micro uppercase tracking-[0.16em] text-signal",
+										children: cap.kicker
+									})]
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+									className: "text-2xl font-semibold tracking-[-0.025em] text-fg sm:text-3xl lg:text-4xl",
+									children: cap.nav
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+									className: "mt-4 max-w-3xl text-base leading-relaxed text-muted sm:text-lg",
+									children: cap.body
+								})] }),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("dl", {
+									className: "grid grid-cols-1 gap-px border border-border bg-border sm:grid-cols-3",
+									children: cap.specs.map((spec) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "bg-surface px-5 py-4",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("dt", {
+											className: "font-mono text-micro uppercase tracking-[0.16em] text-dim",
+											children: spec.k
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("dd", {
+											className: "mt-1 font-mono text-sm text-fg",
+											children: spec.v
+										})]
+									}, spec.k))
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "grid gap-8 lg:grid-cols-3",
+									children: [
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+											className: "font-mono text-micro uppercase tracking-[0.18em] text-muted",
+											children: "Threat"
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+											className: "mt-2 text-sm leading-relaxed text-fg/85",
+											children: cap.problem
+										})] }),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+											className: "font-mono text-micro uppercase tracking-[0.18em] text-muted",
+											children: "Control"
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+											className: "mt-2 text-sm leading-relaxed text-fg/85",
+											children: cap.control
+										})] }),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+											className: "font-mono text-micro uppercase tracking-[0.18em] text-muted",
+											children: "Fit"
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+											className: "mt-2 text-sm leading-relaxed text-fg/85",
+											children: cap.fit
+										})] })
+									]
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+										className: "flex flex-wrap gap-2",
+										children: cap.platforms.map((p) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+											className: "border border-border px-2.5 py-1 font-mono text-micro uppercase tracking-[0.12em] text-dim",
+											children: p
+										}, p))
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
+										size: "sm",
+										onClick: goContact,
+										children: "Brief this capability"
+									})]
+								})
+							]
+						}) })
+					}, cap.id);
+				})
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Reveal, { children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "mt-6 flex flex-col gap-4 border border-border bg-surface px-6 py-8 sm:flex-row sm:items-center sm:justify-between",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+					className: "max-w-xl text-base text-fg",
+					children: "Not sure which layer you need? A specialist will map the stack to the vehicle."
+				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
+					variant: "outline",
+					onClick: () => {
+						navigate({ to: "/contact" });
+						window.scrollTo({
+							top: 0,
+							behavior: "smooth"
+						});
+					},
+					children: "Open a channel"
+				})]
+			}) })
+		]
+	})] });
+}
+//#endregion
+export { SolutionsPage as component };

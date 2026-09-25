@@ -1,0 +1,650 @@
+import { i as __toESM } from "../_runtime.mjs";
+import { n as require_react } from "../_libs/@radix-ui/react-compose-refs+[...].mjs";
+import { n as require_jsx_runtime } from "../_libs/radix-ui__react-context+react.mjs";
+import { a as useFrame, i as Canvas, n as Stars, o as BufferAttribute, s as BufferGeometry, t as AdaptiveDpr } from "../_libs/@react-three/drei+[...].mjs";
+import { t as useReducedMotion } from "../_libs/framer-motion+[...].mjs";
+import { n as palette } from "./corner-frame-CBIp9iMg.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/hero-scene-m6Kb3Zef.js
+var import_react = /* @__PURE__ */ __toESM(require_react());
+var import_jsx_runtime = require_jsx_runtime();
+function Satellite({ spinning }) {
+	const group = (0, import_react.useRef)(null);
+	useFrame((_, delta) => {
+		if (!spinning || !group.current) return;
+		const d = Math.min(delta, .1);
+		group.current.rotation.y += d * .18;
+		group.current.rotation.z = Math.sin(performance.now() * 25e-5) * .08;
+	});
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("group", {
+		ref: group,
+		children: [
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("mesh", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("boxGeometry", { args: [
+				1.15,
+				.72,
+				.72
+			] }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("meshBasicMaterial", {
+				color: palette.surface,
+				transparent: true,
+				opacity: .45
+			})] }),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("mesh", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("boxGeometry", { args: [
+				1.15,
+				.72,
+				.72
+			] }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("meshBasicMaterial", {
+				color: palette.signal,
+				wireframe: true,
+				transparent: true,
+				opacity: .9
+			})] }),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("mesh", {
+				position: [
+					-1.95,
+					0,
+					0
+				],
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("boxGeometry", { args: [
+					2.35,
+					.045,
+					1.2
+				] }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("meshBasicMaterial", {
+					color: palette.signal,
+					wireframe: true,
+					transparent: true,
+					opacity: .75
+				})]
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("mesh", {
+				position: [
+					1.95,
+					0,
+					0
+				],
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("boxGeometry", { args: [
+					2.35,
+					.045,
+					1.2
+				] }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("meshBasicMaterial", {
+					color: palette.signal,
+					wireframe: true,
+					transparent: true,
+					opacity: .75
+				})]
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("mesh", {
+				position: [
+					-1.95,
+					0,
+					0
+				],
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("boxGeometry", { args: [
+					2.35,
+					.02,
+					1.2
+				] }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("meshBasicMaterial", {
+					color: palette.primary,
+					transparent: true,
+					opacity: .18
+				})]
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("mesh", {
+				position: [
+					1.95,
+					0,
+					0
+				],
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("boxGeometry", { args: [
+					2.35,
+					.02,
+					1.2
+				] }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("meshBasicMaterial", {
+					color: palette.primary,
+					transparent: true,
+					opacity: .18
+				})]
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("mesh", {
+				position: [
+					0,
+					.9,
+					0
+				],
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("cylinderGeometry", { args: [
+					.03,
+					.03,
+					1.05,
+					6
+				] }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("meshBasicMaterial", {
+					color: palette.signal,
+					wireframe: true
+				})]
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("mesh", {
+				position: [
+					0,
+					1.48,
+					0
+				],
+				rotation: [
+					Math.PI / 2.3,
+					0,
+					0
+				],
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("coneGeometry", { args: [
+					.48,
+					.28,
+					16,
+					1,
+					true
+				] }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("meshBasicMaterial", {
+					color: palette.primary,
+					wireframe: true,
+					transparent: true,
+					opacity: .85
+				})]
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("mesh", {
+				position: [
+					0,
+					-.78,
+					0
+				],
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("cylinderGeometry", { args: [
+					.02,
+					.02,
+					.85,
+					6
+				] }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("meshBasicMaterial", {
+					color: palette.signal,
+					wireframe: true
+				})]
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("mesh", {
+				position: [
+					0,
+					-1.28,
+					0
+				],
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("octahedronGeometry", { args: [.12, 0] }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("meshBasicMaterial", {
+					color: palette.primary,
+					wireframe: true
+				})]
+			}),
+			[-.22, .22].map((x) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("mesh", {
+				position: [
+					x,
+					0,
+					.48
+				],
+				rotation: [
+					Math.PI / 2,
+					0,
+					0
+				],
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("cylinderGeometry", { args: [
+					.07,
+					.12,
+					.22,
+					8
+				] }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("meshBasicMaterial", {
+					color: palette.primary,
+					wireframe: true,
+					transparent: true,
+					opacity: .8
+				})]
+			}, x))
+		]
+	});
+}
+function Drone({ spinning, position, scale = 1 }) {
+	const group = (0, import_react.useRef)(null);
+	const seed = (0, import_react.useMemo)(() => Math.random() * Math.PI * 2, []);
+	useFrame((state) => {
+		if (!spinning || !group.current) return;
+		const t = state.clock.elapsedTime + seed;
+		group.current.rotation.y = t * .22;
+		group.current.position.y = position[1] + Math.sin(t * .6) * .09;
+	});
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("group", {
+		ref: group,
+		position,
+		scale,
+		children: [
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("mesh", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("boxGeometry", { args: [
+				.34,
+				.12,
+				.5
+			] }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("meshBasicMaterial", {
+				color: palette.surface,
+				transparent: true,
+				opacity: .4
+			})] }),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("mesh", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("boxGeometry", { args: [
+				.34,
+				.12,
+				.5
+			] }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("meshBasicMaterial", {
+				color: palette.signal,
+				wireframe: true,
+				transparent: true,
+				opacity: .85
+			})] }),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("mesh", {
+				position: [
+					0,
+					-.1,
+					.28
+				],
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("sphereGeometry", { args: [
+					.08,
+					8,
+					6
+				] }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("meshBasicMaterial", {
+					color: palette.primary,
+					wireframe: true,
+					transparent: true,
+					opacity: .85
+				})]
+			}),
+			[
+				[
+					.62,
+					0,
+					.62
+				],
+				[
+					-.62,
+					0,
+					.62
+				],
+				[
+					.62,
+					0,
+					-.62
+				],
+				[
+					-.62,
+					0,
+					-.62
+				]
+			].map(([x, y, z], i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("group", {
+				position: [
+					x,
+					y,
+					z
+				],
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("mesh", {
+					position: [
+						-x / 2,
+						0,
+						-z / 2
+					],
+					rotation: [
+						0,
+						Math.atan2(x, z),
+						0
+					],
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("cylinderGeometry", { args: [
+						.015,
+						.015,
+						Math.hypot(x, z),
+						5
+					] }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("meshBasicMaterial", {
+						color: palette.signal,
+						wireframe: true,
+						transparent: true,
+						opacity: .7
+					})]
+				}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("mesh", {
+					rotation: [
+						Math.PI / 2,
+						0,
+						0
+					],
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("torusGeometry", { args: [
+						.14,
+						.006,
+						6,
+						20
+					] }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("meshBasicMaterial", {
+						color: palette.primary,
+						transparent: true,
+						opacity: .5
+					})]
+				})]
+			}, i))
+		]
+	});
+}
+function MilitaryUav({ spinning, position, scale = 1 }) {
+	const group = (0, import_react.useRef)(null);
+	const seed = (0, import_react.useMemo)(() => Math.random() * Math.PI * 2, []);
+	useFrame((state) => {
+		if (!spinning || !group.current) return;
+		const t = state.clock.elapsedTime + seed;
+		group.current.position.x = position[0] + Math.sin(t * .09) * .4;
+		group.current.position.z = position[2] + Math.cos(t * .09) * .4;
+		group.current.rotation.y = -t * .09 + Math.PI / 2;
+		group.current.rotation.z = Math.sin(t * .4) * .05;
+	});
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("group", {
+		ref: group,
+		position,
+		scale,
+		children: [
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("mesh", {
+				rotation: [
+					0,
+					0,
+					Math.PI / 2
+				],
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("cylinderGeometry", { args: [
+					.05,
+					.09,
+					1.35,
+					8
+				] }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("meshBasicMaterial", {
+					color: palette.surface,
+					transparent: true,
+					opacity: .4
+				})]
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("mesh", {
+				rotation: [
+					0,
+					0,
+					Math.PI / 2
+				],
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("cylinderGeometry", { args: [
+					.05,
+					.09,
+					1.35,
+					8
+				] }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("meshBasicMaterial", {
+					color: palette.signal,
+					wireframe: true,
+					transparent: true,
+					opacity: .85
+				})]
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("mesh", {
+				position: [
+					-.05,
+					0,
+					0
+				],
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("coneGeometry", { args: [
+					.95,
+					.16,
+					3,
+					1,
+					true
+				] }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("meshBasicMaterial", {
+					color: palette.primary,
+					wireframe: true,
+					transparent: true,
+					opacity: .7
+				})]
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("mesh", {
+				position: [
+					.58,
+					.08,
+					.16
+				],
+				rotation: [
+					.3,
+					0,
+					.15
+				],
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("boxGeometry", { args: [
+					.02,
+					.16,
+					.18
+				] }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("meshBasicMaterial", {
+					color: palette.signal,
+					wireframe: true,
+					transparent: true,
+					opacity: .7
+				})]
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("mesh", {
+				position: [
+					.58,
+					.08,
+					-.16
+				],
+				rotation: [
+					-.3,
+					0,
+					-.15
+				],
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("boxGeometry", { args: [
+					.02,
+					.16,
+					.18
+				] }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("meshBasicMaterial", {
+					color: palette.signal,
+					wireframe: true,
+					transparent: true,
+					opacity: .7
+				})]
+			})
+		]
+	});
+}
+function OrbitalRings({ spinning }) {
+	const ref = (0, import_react.useRef)(null);
+	useFrame((_, delta) => {
+		if (!spinning || !ref.current) return;
+		ref.current.rotation.y -= Math.min(delta, .1) * .08;
+		ref.current.rotation.x += Math.min(delta, .1) * .02;
+	});
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("group", {
+		ref,
+		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("mesh", {
+			rotation: [
+				Math.PI / 2.6,
+				.4,
+				.2
+			],
+			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("torusGeometry", { args: [
+				2.35,
+				.006,
+				8,
+				96
+			] }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("meshBasicMaterial", {
+				color: palette.signal,
+				transparent: true,
+				opacity: .45
+			})]
+		}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("mesh", {
+			rotation: [
+				Math.PI / 1.7,
+				-.3,
+				.5
+			],
+			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("torusGeometry", { args: [
+				3.1,
+				.005,
+				8,
+				96
+			] }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("meshBasicMaterial", {
+				color: palette.primary,
+				transparent: true,
+				opacity: .35
+			})]
+		})]
+	});
+}
+function DataParticles({ count, spinning }) {
+	const { positions, speeds } = (0, import_react.useMemo)(() => {
+		const positions = new Float32Array(count * 3);
+		const speeds = new Float32Array(count);
+		for (let i = 0; i < count; i += 1) {
+			const r = .35 + Math.random() * .5;
+			const theta = Math.random() * Math.PI * 2;
+			const phi = Math.acos(2 * Math.random() - 1);
+			positions[i * 3] = r * Math.sin(phi) * Math.cos(theta);
+			positions[i * 3 + 1] = r * Math.sin(phi) * Math.sin(theta);
+			positions[i * 3 + 2] = r * Math.cos(phi);
+			speeds[i] = .45 + Math.random() * 1.15;
+		}
+		return {
+			positions,
+			speeds
+		};
+	}, [count]);
+	const geom = (0, import_react.useMemo)(() => {
+		const g = new BufferGeometry();
+		g.setAttribute("position", new BufferAttribute(positions, 3));
+		return g;
+	}, [positions]);
+	(0, import_react.useEffect)(() => () => geom.dispose(), [geom]);
+	useFrame((_, delta) => {
+		if (!spinning) return;
+		const d = Math.min(delta, .1);
+		const attr = geom.getAttribute("position");
+		const arr = attr.array;
+		for (let i = 0; i < count; i += 1) {
+			const ix = i * 3;
+			const x = arr[ix] ?? 0;
+			const y = arr[ix + 1] ?? 0;
+			const z = arr[ix + 2] ?? 0;
+			const len = Math.hypot(x, y, z) || .001;
+			const s = (speeds[i] ?? 1) * d / len;
+			arr[ix] = x + x * s;
+			arr[ix + 1] = y + y * s;
+			arr[ix + 2] = z + z * s;
+			if (len > 6.2) {
+				const r = .28 + Math.random() * .4;
+				const theta = Math.random() * Math.PI * 2;
+				const phi = Math.acos(2 * Math.random() - 1);
+				arr[ix] = r * Math.sin(phi) * Math.cos(theta);
+				arr[ix + 1] = r * Math.sin(phi) * Math.sin(theta);
+				arr[ix + 2] = r * Math.cos(phi);
+			}
+		}
+		attr.needsUpdate = true;
+	});
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("points", {
+		geometry: geom,
+		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("pointsMaterial", {
+			color: palette.signal,
+			size: .032,
+			sizeAttenuation: true,
+			transparent: true,
+			opacity: .85,
+			depthWrite: false
+		})
+	});
+}
+function CameraRig({ spinning }) {
+	useFrame((state) => {
+		if (!spinning) return;
+		const t = state.clock.elapsedTime;
+		state.camera.position.x = 2.6 + Math.sin(t * .12) * .28;
+		state.camera.position.y = 1.05 + Math.cos(t * .09) * .12;
+		state.camera.lookAt(.9, .05, 0);
+	});
+	return null;
+}
+function HeroScene() {
+	const reduced = useReducedMotion() ?? false;
+	const count = typeof window !== "undefined" && window.innerWidth < 768 ? 140 : 300;
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Canvas, {
+		camera: {
+			position: [
+				2.7,
+				1.1,
+				5.2
+			],
+			fov: 36
+		},
+		dpr: [1, 1.5],
+		gl: {
+			antialias: true,
+			alpha: true,
+			powerPreference: "high-performance"
+		},
+		frameloop: reduced ? "demand" : "always",
+		style: {
+			width: "100%",
+			height: "100%",
+			pointerEvents: "none"
+		},
+		children: [
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("color", {
+				attach: "background",
+				args: [palette.bg]
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("fog", {
+				attach: "fog",
+				args: [
+					palette.bg,
+					7,
+					16
+				]
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(AdaptiveDpr, {}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Stars, {
+				radius: 70,
+				depth: 28,
+				count: reduced ? 200 : 900,
+				factor: 2.4,
+				saturation: 0,
+				fade: true,
+				speed: reduced ? 0 : .35
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("group", {
+				position: [
+					1.05,
+					.08,
+					0
+				],
+				children: [
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Satellite, { spinning: !reduced }),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(OrbitalRings, { spinning: !reduced }),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(DataParticles, {
+						count,
+						spinning: !reduced
+					})
+				]
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Drone, {
+				spinning: !reduced,
+				position: [
+					-1.55,
+					-.55,
+					1.2
+				],
+				scale: 1.15
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(MilitaryUav, {
+				spinning: !reduced,
+				position: [
+					3.6,
+					1.35,
+					-1.4
+				],
+				scale: 1.3
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("gridHelper", {
+				args: [
+					18,
+					18,
+					palette.border,
+					palette.surface
+				],
+				position: [
+					0,
+					-2.15,
+					0
+				]
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CameraRig, { spinning: !reduced })
+		]
+	});
+}
+//#endregion
+export { HeroScene };
